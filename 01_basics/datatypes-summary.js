@@ -45,3 +45,28 @@ console.log(typeof myFunction);
 // Arrays  =>  object
 // Function  =>  function
 // Object  =>  object
+
+// +++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(Primitive) , Heap(Non-primitive)
+
+let myYoutubeName = "AyushTandale"
+
+let anotherName = myYoutubeName
+anotherName = "TandaleAyush"
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne = {
+    email: "user@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "Ayush@gmail.com"
+
+console.log(userTwo.email);
+console.log(userOne.email);
+
