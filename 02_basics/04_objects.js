@@ -68,5 +68,14 @@ const {courseInstructor: instructor} = course
 // console.log(courseInstructor);
 console.log(instructor);
 
+// {
+//     "name"  : "Ayush"
+//     "coursename" : "js in hindi"
+//     "price" : "free"
+// }
 
-
+[
+    {},
+    {},
+    {}
+]
