@@ -33,3 +33,20 @@ const chai = () => {
 
 
 // chai()
+
+// const addTwo = (num1, num2) => {
+//     return num1 + num2 
+// }
+
+// const addTwo = (num1, num2) => num1 + num2 
+
+// const addTwo = (num1, num2) => (num1 + num2) 
+
+const addTwo = (num1, num2) => ({username: "Ayush"})
+
+
+console.log(addTwo(3, 4))
+
+// const myArray = [2, 3, 4, 5, 6]
+
+// myArray.forEach()
