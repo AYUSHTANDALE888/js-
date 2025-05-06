@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: white;">
+</body>
+<script>
+    let data ;
+    const requestURL = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest()
+    xhr.open("GET",requestURL)
+    xhr.onreadystatechange = function(click){
+        console.log(xhr.readyState)
+        if (xhr.readyState === 4) {
+            data = JSON.parse(this.responseText)
+            console.log(data)
+            console.log(typeof data);
+        }
+    }
+    xhr.send()
+
+    const div = document.createElement("div")
+    div.innerHTML = "CLICK HERE"
+    div.style.padding = "10px"
+    div.style.backgroundColor = "cyan"
+    div.style.color = "red"
+    document.body.appendChild(div)
+
+    div.addEventListener("click",function(){
+        div.innerHTML = `
+        <h1> FOLLOWERS:-
+            ${data.followers}<h1/>
+        <h1> PHOTO:- <br>
+            <img height="150px" width="150px" src ="https://avatars.githubusercontent.com/u/11613311?v=4"><h1/>
+        `
+    })
+
+</script>
+</html>
